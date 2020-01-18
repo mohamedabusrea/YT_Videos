@@ -1,0 +1,58 @@
+:root {
+    --toggle-width: 52px;
+    --toggle-height: 25px;
+    --circle-margin: 3px;
+    --circle-width: 21px;
+    --timing-animation: .3s;
+    --color-gray: #c1c0c0;
+    --color-green: #83ea0d;
+}
+body {
+    margin: 0;
+}
+.container {
+    background: #00e0e0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.toggle {
+    position: relative;
+    width: var(--toggle-width);
+    height: var(--toggle-height);
+    background: var(--color-gray);
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all var(--timing-animation);
+}
+.toggle--isActive {
+    background-color: var(--color-green);
+}
+.toggle__circle {
+    position: absolute;
+    width: var(--circle-width);
+    height: var(--circle-width);
+    left: var(--circle-margin);
+    background-color: white;
+    border-radius: 50%;
+    transition: all var(--timing-animation);
+}
+.toggle__text {
+    font-family: sans-serif;
+    font-size: 10px;
+    font-weight: bold;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    flex: 1;
+    padding: 0 4px;
+}
+
+.toggle--isActive .toggle__circle {
+    left: calc(var(--toggle-width) - var(--circle-width) - var(--circle-margin));
+}

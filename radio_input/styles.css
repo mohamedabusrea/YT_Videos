@@ -1,0 +1,37 @@
+:root {
+    --circle-width: 15px;
+}
+body {
+    margin: 0;
+}
+.container {
+    background-color: #00e2e2;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.radioInput {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+.radioInput__select {
+    position: absolute;
+    width: calc(var(--circle-width) - 6px);
+    height: calc(var(--circle-width) - 6px);
+    background-color: white;
+    border-radius: 500px;
+    left: 4px;
+}
+.radioInput__circle {
+    width: var(--circle-width);
+    height: var(--circle-width);
+    border: 1px solid white;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.radioInput__circle:not(:last-child) {
+    margin-right: 10px;
+}
